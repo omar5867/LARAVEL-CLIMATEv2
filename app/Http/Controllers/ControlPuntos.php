@@ -11,7 +11,7 @@ class ControlPuntos extends Controller
      */
     public function index()
     {
-        //
+        return(view('points.index'));
     }
 
     /**

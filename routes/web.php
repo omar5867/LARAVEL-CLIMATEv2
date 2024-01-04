@@ -33,14 +33,14 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
  
-    Route::controller(ControlPuntos::class)->prefix('products')->group(function () {
-        Route::get('', 'index')->name('products');
-        Route::get('create', 'create')->name('products.create');
-        Route::post('store', 'store')->name('products.store');
-        Route::get('show/{id}', 'show')->name('products.show');
-        Route::get('edit/{id}', 'edit')->name('products.edit');
-        Route::put('edit/{id}', 'update')->name('products.update');
-        Route::delete('destroy/{id}', 'destroy')->name('products.destroy');
+    Route::controller(ControlPuntos::class)->prefix('puntos')->group(function () {
+        Route::get('', 'index')->name('puntos');
+        Route::get('create', 'create')->name('puntos.create');
+        Route::post('store', 'store')->name('puntos.store');
+        Route::get('show/{id}', 'show')->name('puntos.show');
+        Route::get('edit/{id}', 'edit')->name('puntos.edit');
+        Route::put('edit/{id}', 'update')->name('puntos.update');
+        Route::delete('destroy/{id}', 'destroy')->name('puntos.destroy');
     });
  
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
