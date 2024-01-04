@@ -1,11 +1,9 @@
 @extends('layouts.app')
   
-@section('title', 'Home Product')
-  
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">List Product</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Add Product</a>
+        <a href="{{ route('puntos.create') }}" class="btn btn-primary">Add Product</a>
     </div>
     <hr />
     @if(Session::has('success'))
@@ -24,8 +22,8 @@
             </tr>
         </thead>
         <tbody>+
-            @if($product->count() > 0)
-                @foreach($product as $rs)
+            @if($punto->count() > 0)
+                @foreach($punto as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->ubicacion }}</td>
@@ -46,7 +44,7 @@
                 @endforeach
             @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center" colspan="5">Ningun punto encontrado</td>
                 </tr>
             @endif
         </tbody>

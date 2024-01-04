@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Puntos;
 
 class ControlPuntos extends Controller
 {
@@ -11,7 +12,8 @@ class ControlPuntos extends Controller
      */
     public function index()
     {
-        return(view('points.index'));
+        $punto = Puntos::orderBy('created_at', 'descripcion')->get();
+        return view('points.index', compact('punto'));
     }
 
     /**
@@ -19,7 +21,7 @@ class ControlPuntos extends Controller
      */
     public function create()
     {
-        //
+        return view('points.create');
     }
 
     /**
