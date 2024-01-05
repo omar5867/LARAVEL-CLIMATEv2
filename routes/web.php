@@ -15,8 +15,8 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/creditos', function () {
+    return view('creditos');
 });
 
 Route::controller(AuthController::class)->group(function () {
