@@ -29,7 +29,9 @@ class ControlPuntos extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Puntos::create($request->all());
+ 
+        return redirect()->route('puntos')->with('success', 'Product added successfully');
     }
 
     /**

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('datos', function (Blueprint $table) {
             $table->id();
+            $table->idPunto();
             $table->string('punto');
             $table->unsignedFloat('temperatura');
             $table->unsignedFloat('humedad');
