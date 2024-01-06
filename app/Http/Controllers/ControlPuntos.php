@@ -12,7 +12,7 @@ class ControlPuntos extends Controller
      */
     public function index()
     {
-        $punto = Puntos::orderBy('created_at', 'descripcion')->get();
+        $punto = Puntos::orderBy('created_at')->get();
         return view('points.index', compact('punto'));
     }
 

@@ -5,6 +5,5 @@
 @section('contents')
   <div class="row">
     presentado por:
-    
   </div>
 @endsection
