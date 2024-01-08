@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Puntos;
+use App\Models\Datos;
 
 class ControlPuntos extends Controller
 {
@@ -39,7 +40,8 @@ class ControlPuntos extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Datos::where('punto', $id)->get();
+        return view('points.show', compact('data'));
     }
 
     /**
