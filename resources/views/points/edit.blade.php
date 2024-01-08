@@ -15,7 +15,7 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Descripción</label>
-                <input type="text" name="descripcion" class="form-control" placeholder="Price" value="{{ $punto->descripcion }}" >
+                <input type="text" name="descripcion" class="form-control" placeholder="Descripción" value="{{ $punto->descripcion }}" >
             </div>
         </div>
         <div class="row">

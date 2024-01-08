@@ -1,9 +1,9 @@
 @extends('layouts.app')
   
-@section('title', 'Dashboard - Laravel Admin Panel With Login and Registration')
+@section('title', 'Vista rápida')
   
 @section('contents')
   <div class="row">
-    Dashboard
+    Graficos de datos a analizar soon TM
   </div>
 @endsection

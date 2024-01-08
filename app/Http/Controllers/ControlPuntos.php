@@ -41,7 +41,8 @@ class ControlPuntos extends Controller
     public function show(string $id)
     {
         $data = Datos::where('punto', $id)->get();
-        return view('points.show', compact('data'));
+        $punto=$id;
+        return view('points.show', compact('data','punto'));
     }
 
     /**

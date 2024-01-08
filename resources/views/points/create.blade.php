@@ -1,9 +1,9 @@
 @extends('layouts.app')
   
-@section('title', 'Create Product')
+@section('title', 'Añadir Punto')
   
 @section('contents')
-    <h1 class="mb-0">Add Product</h1>
+    <h1 class="mb-0">Añadir Punto</h1>
     <hr />
     <form action="{{ route('puntos.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -23,7 +23,7 @@
  
         <div class="row">
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Añadir</button>
             </div>
         </div>
     </form>

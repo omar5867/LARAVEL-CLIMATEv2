@@ -2,8 +2,8 @@
   
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
-        <h1 class="mb-0">List Product</h1>
-        <a href="{{ route('puntos.create') }}" class="btn btn-primary">Add Product</a>
+        <h1 class="mb-0">Listado de datos del punto {{ $punto }}</h1>
+        <a href="{{ route('puntos.create') }}" class="btn btn-primary">Añadir punto soon</a>
     </div>
     <hr />
     @if(Session::has('success'))
