@@ -29,7 +29,13 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Profile</span></a>
   </li>
-  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/creditos">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Creditos</span></a>
+  </li>
+
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   
