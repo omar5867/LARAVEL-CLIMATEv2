@@ -33,7 +33,7 @@
                                 <form action="{{ route('puntos.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger m-0">Delete</button>
+                                    <button class="btn btn-danger m-0">Eliminar</button>
                                 </form>
                             </div>
                         </td>

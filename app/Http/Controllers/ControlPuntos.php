@@ -49,7 +49,9 @@ class ControlPuntos extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $punto = Puntos::findOrFail($id);
+  
+        return view('points.edit', compact('punto'));
     }
 
     /**
@@ -57,7 +59,11 @@ class ControlPuntos extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $punto = Puntos::findOrFail($id);
+  
+        $punto->update($request->all());
+  
+        return redirect()->route('puntos')->with('success', 'product updated successfully');
     }
 
     /**
@@ -65,6 +71,10 @@ class ControlPuntos extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $punto = Puntos::findOrFail($id);
+  
+        $punto->delete();
+  
+        return redirect()->route('puntos')->with('success', 'product deleted successfully');
     }
 }

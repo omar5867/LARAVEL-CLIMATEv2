@@ -2,10 +2,8 @@
   
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
-    <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-laugh-wink"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3">Control <sup>Temp & Hum</sup></div>
+    
+    <div class="sidebar-brand-text mx-3">Control de Temperatura y Humedad</div>
   </a>
   
   <!-- Divider -->
@@ -15,19 +13,19 @@
   <li class="nav-item">
     <a class="nav-link" href="{{ route('dashboard') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Dashboard</span></a>
+      <span>Vista Principal</span></a>
   </li>
   
   <li class="nav-item">
     <a class="nav-link" href="{{ route('puntos') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Product</span></a>
+      <span>Puntos de Control</span></a>
   </li>
   
   <li class="nav-item">
     <a class="nav-link" href="/profile">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Profile</span></a>
+      <span>Cuenta</span></a>
   </li>
 
   <li class="nav-item">
