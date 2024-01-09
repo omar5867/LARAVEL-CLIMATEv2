@@ -23,6 +23,10 @@ Route::get('/creditos', function () {
     return view('creditos');
 });
 
+Route::get('/acerca_de', function () {
+    return view('acerca_de');
+});
+
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');

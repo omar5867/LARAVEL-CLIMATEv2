@@ -3,8 +3,9 @@
 
 @section('contents')
   <div class="row">
-    <h2>Creditos</h2>
-    <p>Este proyecto fue desarrollado como parte del diseño de sistemas software para monitoreo de temperatura y humedad en tiempo real con IoT. Agradecemos a las siguientes personas por su contribución:</p>
+    <h2>CRÉDITOS</h2>
+    <p>Este proyecto fue desarrollado como parte del diseño de sistemas software para monitoreo de
+      temperatura y humedad en tiempo real con IoT. Agradecemos a las siguientes personas por su contribución:</p>
 
 <ul>
   <li><strong>Arotaipe Suni, Nayeli Virginia:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:narotaipe@unsa.edu.pe">narotaipe@unsa.edu.pe</a></li>
@@ -16,7 +17,7 @@
 </ul>
 </div> <!-- Cierre de la primera fila -->
 <div class="row">
-    <h3>Agradecimientos</h3>
+    <h2>AGRADECIMIENTOS</h2>
 
     <p>En esta sección, agradecemos a todas las personas que han contribuido al proyecto de diversas maneras. Su apoyo y dedicación han sido fundamentales para el éxito del proyecto.</p>
     
@@ -31,7 +32,7 @@
      <p>Correo electrónico: <a href="mailto:TemyHum@unsa.edu.pe">TemyHum@unsa.edu.pe</a></p>
     
 <!-- Agregar la imagen debajo del correo electrónico -->
-<div class="row">
+<div class="row justify-content-center">
   <img src="{{ asset('admin_assets/img/logunsa.png') }}" alt="Logo"style="width: 600px; height: auto;">
 </div>
   
