@@ -16,6 +16,8 @@
   <!-- Agrega más nombres según sea necesario -->
 </ul>
 </div> <!-- Cierre de la primera fila -->
+
+<hr size=”5px” width= “50%” color="#2B3852"/>
 <div class="row">
     <h2>AGRADECIMIENTOS</h2>
 
