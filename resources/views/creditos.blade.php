@@ -33,7 +33,7 @@
     
 <!-- Agregar la imagen debajo del correo electrónico -->
 <div class="row justify-content-center">
-  <img src="{{ asset('admin_assets/img/logunsa.png') }}" alt="Logo"style="width: 600px; height: auto;">
+  <img src="{{ asset('admin_assets/img/logunsa.png') }}" alt="Logo"style="width: 400px; height: auto;">
 </div>
   
 @endsection
