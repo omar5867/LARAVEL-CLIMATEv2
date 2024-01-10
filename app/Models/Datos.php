@@ -10,8 +10,8 @@ class Datos extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ubicacion',
-        'descripcion',
-        'estado',
+        'punto',
+        'temperatura',
+        'humedad',
     ];
 }

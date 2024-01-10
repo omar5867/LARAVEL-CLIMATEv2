@@ -34,6 +34,19 @@ class ControlPuntos extends Controller
  
         return redirect()->route('puntos')->with('success', 'Product added successfully');
     }
+    public function add(Request $request)
+    {
+        $t=$request->t;
+        $h=$request->h;
+        $ubicación=$request->u;
+
+        $thm = new Datos;
+        $thm->punto = $ubicación;
+        $thm->temperatura = $t;
+        $thm->humedad = $h;
+        $thm->save();
+        return 'great';
+    }
 
     /**
      * Display the specified resource.

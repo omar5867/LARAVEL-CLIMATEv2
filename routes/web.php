@@ -19,6 +19,8 @@ Route::get('/creditos', function () {
     return view('creditos');
 });
 
+Route::get('upload/5867',[ControlPuntos::class,'add']);
+
 Route::controller(AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');
     Route::post('register','registerSave')->name('register.save');
