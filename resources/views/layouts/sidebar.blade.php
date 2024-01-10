@@ -1,11 +1,14 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   
-  <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
-    
-    <div class="sidebar-brand-text mx-3">Control de Temperatura y Humedad</div>
-  </a>
-  
+<!-- Sidebar - Brand -->
+<!-- Sidebar - Brand -->
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
+  <div class="sidebar-brand-icon">
+    <img src="{{ asset('admin_assets/img/LOGO1.png') }}" class="img-fluid" alt="Logo">
+  </div>
+</a>
+
+
   <!-- Divider -->
   <hr class="sidebar-divider my-0">
   
@@ -33,7 +36,13 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Creditos</span></a>
   </li>
-  
+
+  <li class="nav-item">
+    <a class="nav-link" href="/creditos">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Creditos</span></a>
+  </li>
+
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   

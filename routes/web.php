@@ -15,9 +15,18 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/creditos', function () {
     return view('creditos');
 });
+
+Route::get('/acerca_de', function () {
+    return view('acerca_de');
+});
+
 
 Route::get('upload/5867',[ControlPuntos::class,'add']);
 
