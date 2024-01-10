@@ -32,6 +32,12 @@
   </li>
 
   <li class="nav-item">
+    <a class="nav-link" href="/acerca_de">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Acerca de</span></a>
+  </li>
+
+  <li class="nav-item">
     <a class="nav-link" href="/creditos">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Creditos</span></a>
