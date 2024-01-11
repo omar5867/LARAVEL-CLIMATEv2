@@ -95,9 +95,17 @@ class ControlPuntos extends Controller
     public function editdata(string $id)
     {
         $dato = Datos::findOrFail($id);
-        $iddata=$id;
   
-        return view('points.editdata', compact('dato','iddata'));
+        return view('points.editdata', compact('dato','id'));
+    }
+
+    public function updatedata(Request $request, string $id)
+    {
+        $dato = Datos::findOrFail($id);
+  
+        $dato->update($request->all());
+  
+        return redirect()->route('puntos')->with('success', 'Dato editado correctamente');
     }
 
     public function destroydata(string $id)

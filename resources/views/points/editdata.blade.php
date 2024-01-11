@@ -3,9 +3,9 @@
 @section('title', 'Editar Dato')
   
 @section('contents')
-    <h1 class="mb-0">Editar Dato con id {{ $iddata }}</h1>
+    <h1 class="mb-0">Editar Dato con id {{ $id }}</h1>
     <hr />
-    <form action="{{ route('puntos.updatedata', $dato->id) }}" method="POST">
+    <form action="{{ route('puntos.updatedata', $id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="row">
