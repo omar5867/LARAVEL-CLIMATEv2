@@ -51,7 +51,10 @@ Route::middleware('auth')->group(function () {
         Route::get('show/{id}', 'show')->name('puntos.show');
         Route::get('edit/{id}', 'edit')->name('puntos.edit');
         Route::put('edit/{id}', 'update')->name('puntos.update');
+        Route::get('editdata/{id}', 'editdata')->name('puntos.editdata');
+        Route::put('editdata/{id}', 'updatedata')->name('puntos.updatedata');
         Route::delete('destroy/{id}', 'destroy')->name('puntos.destroy');
+        Route::delete('destroydata/{id}', 'destroydata')->name('puntos.destroydata');
     });
  
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');

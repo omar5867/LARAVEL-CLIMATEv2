@@ -29,8 +29,8 @@
                         <td class="align-middle">{{ $rs->humedad }}</td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ route('puntos.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('puntos.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                <a href="{{ route('puntos.editdata', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
+                                <form action="{{ route('puntos.destroydata', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger m-0">Eliminar</button>

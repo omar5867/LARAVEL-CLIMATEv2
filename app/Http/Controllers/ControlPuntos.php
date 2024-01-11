@@ -32,7 +32,7 @@ class ControlPuntos extends Controller
     {
         Puntos::create($request->all());
  
-        return redirect()->route('puntos')->with('success', 'Product added successfully');
+        return redirect()->route('puntos')->with('success', 'Punto añadido correctamente');
     }
     public function add(Request $request)
     {
@@ -77,7 +77,7 @@ class ControlPuntos extends Controller
   
         $punto->update($request->all());
   
-        return redirect()->route('puntos')->with('success', 'product updated successfully');
+        return redirect()->route('puntos')->with('success', 'Punto editado correctamente');
     }
 
     /**
@@ -89,6 +89,23 @@ class ControlPuntos extends Controller
   
         $punto->delete();
   
-        return redirect()->route('puntos')->with('success', 'product deleted successfully');
+        return redirect()->route('puntos')->with('success', 'Punto eliminado correctamente');
+    }
+
+    public function editdata(string $id)
+    {
+        $dato = Datos::findOrFail($id);
+        $iddata=$id;
+  
+        return view('points.editdata', compact('dato','iddata'));
+    }
+
+    public function destroydata(string $id)
+    {
+        $dato = Datos::findOrFail($id);
+  
+        $dato->delete();
+  
+        return redirect()->route('puntos')->with('success', 'Valor eliminado correctamente');
     }
 }
