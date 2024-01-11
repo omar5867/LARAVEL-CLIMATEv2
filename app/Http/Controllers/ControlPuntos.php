@@ -54,8 +54,8 @@ class ControlPuntos extends Controller
     public function show(string $id)
     {
         $data = Datos::where('punto', $id)->get();
-        $punto=$id;
-        return view('points.show', compact('data','punto'));
+        $idpunto=$id;
+        return view('points.show', compact('data','idpunto'));
     }
 
     /**
@@ -107,5 +107,23 @@ class ControlPuntos extends Controller
         $dato->delete();
   
         return redirect()->route('puntos')->with('success', 'Valor eliminado correctamente');
+    }
+
+    public function createdata(string $idpunto)
+    {
+        return view('points.createdata',compact('idpunto'));
+    }
+
+    public function storedata(Request $request, string $idpunto)
+    {
+        $t=$request->temperatura;
+        $h=$request->humedad;
+
+        $thm = new Datos;
+        $thm->punto = $idpunto;
+        $thm->temperatura = $t;
+        $thm->humedad = $h;
+        $thm->save();
+        return redirect()->route('puntos')->with('success', 'Dato añadido correctamente');
     }
 }

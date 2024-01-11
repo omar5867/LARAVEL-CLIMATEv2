@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
         Route::get('', 'index')->name('puntos');
         Route::get('create', 'create')->name('puntos.create');
         Route::post('store', 'store')->name('puntos.store');
+        Route::get('createdata/{idpunto}', 'createdata')->name('puntos.createdata');
+        Route::post('storedata/{idpunto}', 'storedata')->name('puntos.storedata');
         Route::get('show/{id}', 'show')->name('puntos.show');
         Route::get('edit/{id}', 'edit')->name('puntos.edit');
         Route::put('edit/{id}', 'update')->name('puntos.update');
