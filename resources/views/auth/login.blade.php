@@ -52,7 +52,7 @@
                         <label class="custom-control-label" for="customCheck">Recuerdame</label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block btn-user">Ingresar</button>
+                    <button type="submit" class="btn btn-dark btn-block btn-user">Ingresar</button>
                   </form>
                   <hr>
                   <div class="text-center">

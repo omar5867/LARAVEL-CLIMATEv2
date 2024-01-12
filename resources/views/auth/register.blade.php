@@ -54,7 +54,7 @@
                     @enderror
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-user btn-block">Registrar Cuenta</button>
+                <button type="submit" class="btn btn-dark btn-user btn-block">Registrar Cuenta</button>
               </form>
               <hr>
               <div class="text-center">
