@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
 Route::get('/creditos', function () {
     return view('creditos');
 });
@@ -56,3 +60,4 @@ Route::middleware('auth')->group(function () {
  
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
+
