@@ -32,7 +32,7 @@ class ControlPuntos extends Controller
     {
         Puntos::create($request->all());
  
-        return redirect()->route('puntos')->with('success', 'Product added successfully');
+        return redirect()->route('puntos')->with('success', 'Punto añadido correctamente');
     }
     public function add(Request $request)
     {
@@ -54,8 +54,8 @@ class ControlPuntos extends Controller
     public function show(string $id)
     {
         $data = Datos::where('punto', $id)->get();
-        $punto=$id;
-        return view('points.show', compact('data','punto'));
+        $idpunto=$id;
+        return view('points.show', compact('data','idpunto'));
     }
 
     /**
@@ -77,7 +77,7 @@ class ControlPuntos extends Controller
   
         $punto->update($request->all());
   
-        return redirect()->route('puntos')->with('success', 'product updated successfully');
+        return redirect()->route('puntos')->with('success', 'Punto editado correctamente');
     }
 
     /**
@@ -89,6 +89,49 @@ class ControlPuntos extends Controller
   
         $punto->delete();
   
-        return redirect()->route('puntos')->with('success', 'product deleted successfully');
+        return redirect()->route('puntos')->with('success', 'Punto eliminado correctamente');
+    }
+
+    public function editdata(string $id)
+    {
+        $dato = Datos::findOrFail($id);
+  
+        return view('points.editdata', compact('dato','id'));
+    }
+
+    public function updatedata(Request $request, string $id)
+    {
+        $dato = Datos::findOrFail($id);
+  
+        $dato->update($request->all());
+  
+        return redirect()->route('puntos')->with('success', 'Dato editado correctamente');
+    }
+
+    public function destroydata(string $id)
+    {
+        $dato = Datos::findOrFail($id);
+  
+        $dato->delete();
+  
+        return redirect()->route('puntos')->with('success', 'Valor eliminado correctamente');
+    }
+
+    public function createdata(string $idpunto)
+    {
+        return view('points.createdata',compact('idpunto'));
+    }
+
+    public function storedata(Request $request, string $idpunto)
+    {
+        $t=$request->temperatura;
+        $h=$request->humedad;
+
+        $thm = new Datos;
+        $thm->punto = $idpunto;
+        $thm->temperatura = $t;
+        $thm->humedad = $h;
+        $thm->save();
+        return redirect()->route('puntos')->with('success', 'Dato añadido correctamente');
     }
 }
