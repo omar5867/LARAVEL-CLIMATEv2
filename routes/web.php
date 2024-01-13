@@ -3,6 +3,8 @@
 use App\Http\Controllers\ControlPuntos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Models\Datos;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +47,12 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
-        return view('dashboard');
+        $data1 = Datos::where('punto', 1)->get();
+        
+        $data2 = Datos::where('punto', 2)->get();
+
+        return view('dashboard', compact('data1','data2'));
+
     })->name('dashboard');
  
     Route::controller(ControlPuntos::class)->prefix('puntos')->group(function () {
