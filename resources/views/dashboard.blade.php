@@ -24,10 +24,10 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Temperatura</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">°C</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">15°C</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-temperature-low fa-3x text-gray-400"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -42,10 +42,10 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Humedad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">%RH</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">46 %RH</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-cloud-rain fa-3x text-gray-400"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -62,19 +62,13 @@
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Arequipa</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Miraflores</div>
                                                 </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
+                                            
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-wifi fa-3x text-gray-400"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -88,11 +82,11 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Hora</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                Fecha y hora</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2024-01-13 01:43</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-calendar fa-3x text-gray-400"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +104,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Gráfico de Temperatura</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -131,6 +125,48 @@
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
+                                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                                    const ctx = document.getElementById('myAreaChart');
+                                    new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Cono Norte', 'JLByR', 'Socabaya', 'Mariano Melgar', 'Hunter', 'Miraflores'],
+                                            datasets: [{
+                                            label: 'Temperatura °C',
+                                            data: [9, 33, 22, 13, 18, 15],
+                                            backgroundColor: [
+                                                'rgba(255, 105, 135, 0.5)',
+                                                'rgba(54, 162, 133, 0.5)',
+                                                'rgba(255, 192, 85, 0.5)',
+                                                'rgba(75, 152, 112, 0.5)',
+                                                'rgba(153, 162, 64, 0.5)',
+                                                'rgba(255, 212, 255, 0.5)',    
+                                            ],
+                                            borderColor:[
+                                                'rgba(255, 105, 135, 1)',
+                                                'rgba(54, 162, 133, 1)',
+                                                'rgba(255, 192, 85, 1)',
+                                                'rgba(75, 152, 112, 1)',
+                                                'rgba(153, 162, 64, 1)',
+                                                'rgba(255, 212, 255, 1)',    
+                                            ],
+                                            borderWidth: 3
+                                            }]
+                                        },
+                                            options: {
+                                            scales: {
+                                                y: {
+                                                beginAtZero: true
+                                                }
+                                            }
+                                            }
+                                    });
+                                    </script>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +177,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Gráfico de la humedad registrada</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,19 +198,45 @@
                                     <div class="chart-pie pt-4 pb-2">
                                         <canvas id="myPieChart"></canvas>
                                     </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
+
+                                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                    <script>
+                                    const ctp = document.getElementById('myPieChart');
+                                    new Chart(ctp, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: [
+                                                'Cono Norte',
+                                                'JLByR',
+                                                'Socabaya',
+                                                'Mariano Melgar',
+                                                'Hunter',
+                                                'Miraflores'
+                                            ],
+                                        datasets: [{
+                                            label: 'Humedad RH %',
+                                            data: [11, 55, 88,44,37,46],
+                                            backgroundColor: [
+                                                'rgba(255, 105, 135, 0.5)',
+                                                'rgba(54, 162, 133, 0.5)',
+                                                'rgba(255, 192, 85, 0.5)',
+                                                'rgba(75, 152, 112, 0.5)',
+                                                'rgba(153, 162, 64, 0.5)',
+                                                'rgba(255, 212, 255, 0.5)', 
+                                            ],
+                                            hoverOffset: 4
+                                            
+                                        }],
+                                        },  
+                                    });
+                                    </script>
+ 
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 @endsection
