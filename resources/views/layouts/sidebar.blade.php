@@ -15,7 +15,7 @@
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
     <a class="nav-link" href="{{ route('dashboard') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-chart-bar"></i>
       <span>Vista Principal</span></a>
   </li>
   
@@ -27,20 +27,20 @@
   
   <li class="nav-item">
     <a class="nav-link" href="/profile">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-envelope"></i>
       <span>Cuenta</span></a>
   </li>
 
   <li class="nav-item">
     <a class="nav-link" href="/acerca_de">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-brain"></i>
       <span>Acerca de</span></a>
   </li>
 
   <li class="nav-item">
     <a class="nav-link" href="/creditos">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Creditos</span></a>
+      <i class="fas fa-fw fa-users"></i>
+      <span>Créditos</span></a>
   </li>
 
   <!-- Divider -->

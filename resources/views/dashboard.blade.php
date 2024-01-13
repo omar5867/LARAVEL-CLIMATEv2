@@ -2,6 +2,8 @@
 
 @section('title', 'Vista Principal')
 
+
+
 @section('contents')
   <!-- End of Topbar -->
 
@@ -126,7 +128,7 @@
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
                                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+                                    <a class="nav-link" href="{{ route('puntos') }}">
                                     <script>
                                     const ctx = document.getElementById('myAreaChart');
                                     new Chart(ctx, {
@@ -134,6 +136,7 @@
                                         data: {
                                             labels: ['Cono Norte', 'JLByR', 'Socabaya', 'Mariano Melgar', 'Hunter', 'Miraflores'],
                                             datasets: [{
+                        
                                             label: 'Temperatura °C',
                                             data: [9, 33, 22, 13, 18, 15],
                                             backgroundColor: [
@@ -156,11 +159,11 @@
                                             }]
                                         },
                                             options: {
-                                            scales: {
-                                                y: {
-                                                beginAtZero: true
+                                                scales: {
+                                                    y: {
+                                                        beginAtZero: true
+                                                    }
                                                 }
-                                            }
                                             }
                                     });
                                     </script>
