@@ -8,15 +8,15 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #111;
+            font-family: 'Tahoma', sans-serif;
+            color: #FFFFFF;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('admin_assets/img/fondo_welcome4.jpg') no-repeat center center fixed;
+            background: url('admin_assets/img/BGM_home.png') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -85,7 +85,9 @@
 
     <h1>Bienvenido</h1>
     <h2>Explora el flujo térmico del entorno a través del tiempo con nuestro sistema de monitoreo.</h2>
-    <p>Descubre información detallada sobre los cambios de temperatura y humedad en diferentes ubicaciones a lo largo del tiempo. Nuestro avanzado sistema de monitoreo te proporciona datos precisos y útiles para comprender mejor el entorno.</p>
+    <p>Descubre información detallada sobre los cambios de temperatura y humedad en diferentes ubicaciones
+        a lo largo del tiempo.<br>Nuestro avanzado sistema de monitoreo te proporciona datos precisos y
+        útiles para comprender mejor el entorno.</p>
 
     <footer>
         UNSA © Control de Valores de Temperatura y Humedad 2024
