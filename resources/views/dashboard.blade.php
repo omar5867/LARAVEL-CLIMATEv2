@@ -332,7 +332,26 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
+                        <div class="col-xl-4 col-lg-5">
+                                <div class="card shadow mb-4">
+                                    <div class="card-body">
+                                        
+                                            
+                                                
+
+                                                    <div class="col-area">
+                                                        <!--<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=SENAMHI+lima+peru" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.3642048903766!2d-71.52694332598205!3d-16.406319238318297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b9073028ec5%3A0xc59607f45ece2b1f!2sEscuela%20profesional%20de%20ingenier%C3%ADa%20en%20telecomunicaciones!5e0!3m2!1ses-419!2spe!4v1705216634732!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
+                                                    </div>
+                                                    
+                                                
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
                     </div>
 
 @endsection
