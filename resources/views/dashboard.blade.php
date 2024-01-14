@@ -124,49 +124,81 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
+
+                                    <?php
+                                        $con = new mysqli('localhost','root','','clima');
+                                        $query = $con->query("
+                                            SELECT * FROM `datos`
+                                        
+                                        ");
+
+                                        foreach($query as $data)
+                                        {
+                                            $ubicacion[] = $data['punto'];
+                                            $temperatura[] = $data['temperatura'];
+            
+                                        }
+
+
+                                    
+                                    ?>
+
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
                                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                                     <a class="nav-link" href="{{ route('puntos') }}">
                                     <script>
-                                    const ctx = document.getElementById('myAreaChart');
-                                    new Chart(ctx, {
-                                        type: 'bar',
-                                        data: {
-                                            labels: ['Cono Norte', 'JLByR', 'Socabaya', 'Mariano Melgar', 'Hunter', 'Miraflores'],
+                                        // === include 'setup' then 'config' above ===
+                                        const labels = <?php echo json_encode($ubicacion) ?>;
+                                        const data = {
+                                            labels: labels,
+                                            
                                             datasets: [{
-                        
+                                                
                                             label: 'Temperatura °C',
-                                            data: [9, 33, 22, 13, 18, 15],
+                                            data: <?php echo json_encode($temperatura) ?>,
+                                            
+                                            
                                             backgroundColor: [
-                                                'rgba(255, 105, 135, 0.5)',
-                                                'rgba(54, 162, 133, 0.5)',
-                                                'rgba(255, 192, 85, 0.5)',
-                                                'rgba(75, 152, 112, 0.5)',
-                                                'rgba(153, 162, 64, 0.5)',
-                                                'rgba(255, 212, 255, 0.5)',    
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(255, 159, 64, 0.2)',
+                                                'rgba(255, 205, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)',
+                                                'rgba(201, 203, 207, 0.2)'
                                             ],
-                                            borderColor:[
-                                                'rgba(255, 105, 135, 1)',
-                                                'rgba(54, 162, 133, 1)',
-                                                'rgba(255, 192, 85, 1)',
-                                                'rgba(75, 152, 112, 1)',
-                                                'rgba(153, 162, 64, 1)',
-                                                'rgba(255, 212, 255, 1)',    
+                                            borderColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(255, 159, 64)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(54, 162, 235)',
+                                                'rgb(153, 102, 255)',
+                                                'rgb(201, 203, 207)'
                                             ],
                                             borderWidth: 3
                                             }]
-                                        },
+                                        };
+
+                                        const config = {
+                                            type: 'bar',
+                                            data: data,
                                             options: {
-                                                scales: {
-                                                    y: {
-                                                        beginAtZero: true
-                                                    }
+                                            scales: {
+                                                y: {
+                                                beginAtZero: true
                                                 }
                                             }
-                                    });
-                                    </script>
+                                            },
+                                        };
+
+                                        var myChart = new Chart(
+                                            document.getElementById('myAreaChart'),
+                                            config
+                                        );
+                                        </script>
 
 
                                     </div>
