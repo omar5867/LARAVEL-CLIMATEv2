@@ -126,7 +126,7 @@
                                 <div class="card-body">
 
                                     <?php
-                                        $con = new mysqli('localhost','root','','clima');
+                                        $con = new mysqli('localhost','root','',env('DB_DATABASE'));
                                         $query = $con->query("
                                             SELECT * FROM `datos`
                                         
@@ -270,7 +270,7 @@
                                     <a class="nav-link" href="{{ route('puntos') }}">
 
                                     <?php
-                                        $con = new mysqli('localhost','root','','clima');
+                                        $con = new mysqli('localhost','root','',env('DB_DATABASE'));
                                         $query = $con->query("
                                             SELECT * FROM `datos`
                                         
