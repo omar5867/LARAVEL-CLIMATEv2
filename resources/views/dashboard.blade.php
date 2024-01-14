@@ -160,6 +160,7 @@
                                             data: <?php echo json_encode($temperatura) ?>,
                                             
                                             
+                                            
                                             backgroundColor: [
                                                 'rgba(255, 99, 132, 0.2)',
                                                 'rgba(255, 159, 64, 0.2)',
@@ -204,7 +205,36 @@
                                     </div>
                                 </div>
                             </div>
+                                    <div class="col-xl-8 col-lg-7">
+                                        <div class="card border-left-secondary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-3">
+                                                        <div class="badge text-wrap" style="width: 7rem;">
+                                                        <img src="http://127.0.0.1:8000/admin_assets/img/LOGO1.png" class="card-img-top" alt="3">
+
+                                                            En Arequipa estos últimos dias se encuentra con el cielo mayormente nublado disperso  en el día y la noche. Tiempo fresco y seco al mediodía. Noches frías.
+                                                        </div>
+                                                        <div class="badge text-wrap" style="width: 6rem;">
+                                                        <img src="https://www.senamhi.gob.pe/public/images/icono/icon008.png" class="card-img-top" alt="...">
+                                                            La humedad relativa promedio en dicha estación se encuentra alrededor de 62,2 %.
+                                          
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                         </div>
+                        
+
+
+
+
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
@@ -282,7 +312,16 @@
                                                     'rgba(153, 102, 255, 0.2)',
                                                     'rgba(201, 203, 207, 0.2)'
                                                 ],
-                                           
+                                                borderColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(255, 159, 64)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(54, 162, 235)',
+                                                'rgb(153, 102, 255)',
+                                                'rgb(201, 203, 207)'
+                                                ],
+                                                
                                                 hoverOffset: 4
                                             }],
                                             },
