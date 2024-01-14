@@ -212,7 +212,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Gráfico de la humedad registrada</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Gráfico de la humedad registrada </h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -230,41 +230,63 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
+                                    <div class="chart-area">
+                                            
+                                            <canvas id="myPieChart"></canvas>
+                                        
                                     </div>
+                                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                    <a class="nav-link" href="{{ route('puntos') }}">
 
+                                    <?php
+                                        $con = new mysqli('localhost','root','','clima');
+                                        $query = $con->query("
+                                            SELECT * FROM `datos`
+                                        
+                                        ");
+
+                                        foreach($query as $data)
+                                        {
+                                            $ubicacion[] = $data['punto'];
+                                            $temperatura[] = $data['temperatura'];
+                                            $humedad[] = $data['humedad'];
+            
+                                        }
+
+
+                                    
+                                    ?>
+                                    
                                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
                                     <script>
-                                    const ctp = document.getElementById('myPieChart');
-                                    new Chart(ctp, {
-                                        type: 'doughnut',
-                                        data: {
-                                            labels: [
-                                                'Cono Norte',
-                                                'JLByR',
-                                                'Socabaya',
-                                                'Mariano Melgar',
-                                                'Hunter',
-                                                'Miraflores'
-                                            ],
-                                        datasets: [{
-                                            label: 'Humedad RH %',
-                                            data: [11, 55, 88,44,37,46],
-                                            backgroundColor: [
-                                                'rgba(255, 105, 135, 0.5)',
-                                                'rgba(54, 162, 133, 0.5)',
-                                                'rgba(255, 192, 85, 0.5)',
-                                                'rgba(75, 152, 112, 0.5)',
-                                                'rgba(153, 162, 64, 0.5)',
-                                                'rgba(255, 212, 255, 0.5)', 
-                                            ],
-                                            hoverOffset: 4
+                                        const ctp = document.getElementById('myPieChart');
+                                        new Chart(ctp, {
+                                            type: 'doughnut',
+                                        // === include 'setup' then 'config' above ===
                                             
-                                        }],
-                                        },  
-                                    });
+                                            data : {
+                                                labels: labels,
+                                            
+                                            datasets: [{
+                                                label: 'Humedad RH %',
+                                                data: <?php echo json_encode($humedad)?>,
+                                            
+                                            
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)',
+                                                    'rgba(255, 205, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(201, 203, 207, 0.2)'
+                                                ],
+                                           
+                                                hoverOffset: 4
+                                            }],
+                                            },
+                                        });
                                     </script>
  
                                     </div>
