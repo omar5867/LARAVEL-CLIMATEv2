@@ -217,7 +217,7 @@
                                                         </div>
                                                         <div class="badge text-wrap" style="width: 6rem;">
                                                         <img src="https://www.senamhi.gob.pe/public/images/icono/icon008.png" class="card-img-top" alt="...">
-                                                            La humedad relativa promedio en dicha estación se encuentra alrededor de 62,2 %.
+                                                            La humedad relativa promedio en dicha estación se encuentra alrededor de 41.83 %.
                                           
                                                         </div>
                                                         
@@ -334,14 +334,25 @@
                                 </div>
                             </div>
                             
+
+
+                            
                         </div>
-                        <div class="col-xl-7 col-lg-8">
+                        <div class="col-xl-6 col-lg-7">
                                 <div class="card shadow mb-4">
                                     <div class="card-body">
                                       <div class="col-area"; width="", height="">
+                                            <div
+                                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                                <h6 class="m-0 font-weight-bold text-primary">Ubicación actual del sensor. </h6>
+                                                
+                                                
+                                            
+                                            </div>
                                             <!--<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=SENAMHI+lima+peru" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.3642048903766!2d-71.52694332598205!3d-16.406319238318297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b9073028ec5%3A0xc59607f45ece2b1f!2sEscuela%20profesional%20de%20ingenier%C3%ADa%20en%20telecomunicaciones!5e0!3m2!1ses-419!2spe!4v1705216634732!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
-                                        </div>  
+                                        </div>
+                                        
                                     </div>
                                 </div>
                         </div>
